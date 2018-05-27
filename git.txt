@@ -1,0 +1,42 @@
+#key
+ssh-keygen -t rsa -C "20796698@qq.com"
+
+#连接远程
+git init
+git remote add project git@github.com:fdisk123/original.git
+git pull
+
+#init
+echo "# doc" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:CheukBinLi/doc.git
+git push -u origin master
+
+
+
+#主干
+git checkout master
+
+
+#分支
+git branch newBranch
+
+git checkout newBranch
+
+git add file
+
+git commit -m "hi"
+
+git push project newBranch
+
+
+#删除
+git rm -r file
+
+git add file
+
+git commit -m "delete"
+
+git push project newBranch
